@@ -1,0 +1,225 @@
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+.container *{
+	box-sizing: border-box;
+}
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides,
+.mySlides2,
+.mySlides3 {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor,
+.cursor2,
+.cursor3 {
+  cursor: pointer;
+}
+
+
+/* Next & previous buttons */
+.prev,
+.next,
+.prev2,
+.next2,
+.prev3,
+.next3{
+  z-index:2;
+  cursor: pointer;
+  position: absolute;
+  top: 65%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Position the "next button" to the right */
+.next,
+.next2,
+.next3 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover,
+.prev2:hover,
+.next2:hover,
+.prev3:hover,
+.next3:hover{
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.exit_slide{
+  z-index:2;
+  cursor: pointer;
+  position: relative;
+  bottom: 35px;
+  width: auto;
+  padding: 5px 10px 5px 10px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 26px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  left: 0px;
+  border-radius: 3px 0 0 3px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.exit_slide:hover {
+  color: white;
+  font-weight: bold;
+  font-size: 26px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 2000px;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row,
+.row2,
+.row3{
+	overflow-x:scroll;
+}
+
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: black; 
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+
+.row:after,
+.row2:after,
+.row3:after {
+  content: "";
+  display: table;
+  clear: both;
+  overflow-x:scroll;
+}
+
+/*columns side by side */
+.box_column,
+.box_column2,
+.box_column3 {
+  float: left;
+  width: 0.01667%;
+}
+
+
+.down_background{
+	color:white;
+	font-size: 20px;
+    font-weight: bold;
+    
+    padding-left:45%;
+    padding-right:55%;
+
+    background-color:black;
+    opacity:0.7;
+    cursor: pointer;
+    position: relative;
+    top: 18.3%;
+    width: 100%;
+    height:30px;
+	
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.down_background:hover{
+    color:white;
+	font-size: 20px;
+    font-weight: bold;
+    
+    padding-left:45%;
+    padding-right:55%;
+
+    background-color:black;
+    opacity:0.5;
+    cursor: pointer;
+    position: relative;
+    top: 18.3%;
+    width: 100%;
+	height:30px;
+	
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+
+/* Add a transparency effect for thumnbail images */
+.demo,
+.demo2,
+.demo3 {
+  opacity: 0.85;
+}
+
+.active,
+.active2,
+.active3,
+.demo:hover,
+.demo2:hover,
+.demo3:hover {
+  opacity: 1;
+}
+
+.slide_container{
+	position:relative;
+	z-index:1;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Upload words</title>
+		<link href="css/upload_style.css?v=33111111145" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+		<meta charset="UTF-8"> 
+		<meta name = "Upload" content="AESO">
+		<script src="js/upload.js?v=331111125" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="flex-test" id="test1-container"> 
+			<div class="main-window">
+				<div class="home-box">
+					<i class="fa fa-home cursor" style="font-size:48px;float:left;cursor:pointer" id="home" onclick="goHome()"></i>
+				</div>
+				<div id="welcome-info"></div>
+			</div>
+			
+			<div class="main-window">
+				<h1 class="upload-text">Share Your Words</h1>
+				
+				<!--<form method="post" enctype="multipart/form-data">-->
+					<table id="rank_table" class="upload-table">
+						<tbody>
+							<tr>
+								<td>
+									<label for="word">Word:</label>
+								</td>
+								<td>
+									<input id="word" type="text" name="word" placeholder="word" oninput="inputProcessing()" required> <br>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									
+								</td>
+								<td>
+									<select id="partsOfSpeechSelection">
+										<option value="noun" selected>noun</option>
+										<option value="pronoun">pronoun</option>
+										<option value="verb">verb</option>
+										<option value="adjective">adjective</option>
+										<option value="adverb">adverb</option>
+										<option value="preposition">preposition</option>
+										<option value="conjunction">conjunction</option>
+										<option value="interjection">interjection</option>
+									</select>
+									<br>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="definition">Definition:</label>
+								</td>
+								<td>
+									<input id="definition" type="text" name="definition" placeholder="definition" oninput="inputProcessing()" required> <br>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="example">Example:</label>
+								</td>
+								<td>
+									<input id="example" type="text" name="example" placeholder="example" oninput="inputProcessing()" required> <br>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="synonyms">Synonyms:</label>
+								</td>
+								<td>
+									<input id="synonyms" type="text" name="synonyms" placeholder="synonyms" oninput="inputProcessing()" required> <br>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="image">Choose an image:</label>
+								</td>
+								<td>
+									<input id="image" type="file" name="word_image" onchange="previewImage(this)" required>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<img id="preview" alt="Image Preview" class="img-preview">
+									<p id="message"></p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="button-container">
+						<button class="upload-btn" onclick="uploadProcessing()">UPLOAD</button>
+					</div>
+				<!--</form>-->
+				
+			</div>		
+		</div>
+	</body>
+</html>

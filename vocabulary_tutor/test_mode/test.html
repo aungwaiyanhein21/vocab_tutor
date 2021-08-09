@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+			<title>Test Mode</title>
+			<link href="css/test.css?v=33111111123" rel="stylesheet" type="text/css"/>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+			<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+			<meta charset="UTF-8"> 
+			<meta name = "Learning Mode" content="AESO">
+			<script src="js/test.js?v=331111123" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+	
+		<div class="flex-test" id="test1-container"> 
+			<div class="main-window">
+				<div class="home-box">
+					<i class="fa fa-home cursor" style="font-size:48px;float:left" id="home" onclick="go_home()"></i>
+				</div>
+				<div class="time-box" id="timer"></div>
+			</div>
+
+			<div class="main-window">
+				<!-- adding table for record keeping -->
+				
+				<h2 class="progress-text">Progress</h2>
+				<table class="test-progress-table" id="progress_table">
+				</table>
+				
+				<h1 id="finished_text" style="text-align:center;color: red;"></h1>
+				
+				<br><br><br><br>
+				
+				<h1 class="word" id="question">
+					steadfast
+				</h1>
+				<div class="test1-row" >
+					<div class="column">
+					  <button class="choice" id="choice1" style="width:60%"  alt="choice1" onclick="choice_click(1)">resolutely or dutifully firm and unwavering</button>				
+					</div>
+					<div class="column">
+					  <button class="choice" id="choice2" style="width:60%"  alt="choice2" onclick="choice_click(2)">distress or embarrassment at having failed or been humiliated</button>				
+					</div>  
+					<div class="column">
+					  <button class="choice" id="choice3" style="width:60%"  alt="choice3" onclick="choice_click(3)">dazed, weak, or unsteady, especially from illness, intoxication, or a blow</button>
+					</div>
+					<div class="column">
+					  <button class="choice" id="choice4" style="width:60%"  alt="choice4" onclick="choice_click(4)">characterized by or appealing to an abnormal and unhealthy interest</button>
+					</div>
+					
+					<!--
+					<br><br><br>
+					<div class="column">
+						<button class="choice" id="finished_btn" style="width:60%">Done</button>
+					</div>
+					-->
+				</div>
+			</div>			
+		</div>
+		
+		<!--
+		<div class="flex-test" id="test2-container"> 
+			<div class="main-window">
+				<div class="time-box">30:00</div>
+			</div>
+			
+			<div class="main-window" onselectstart="return false">	
+					<div class="column1">
+						  <div class="drop context-menu" id="choice1" alt="choice1" onclick="pic_click(1)">resolutely or dutifully firm and unwavering</div>
+						  <div class="drop context-menu" id="choice2" alt="choice2" onclick="pic_click(1)">distress or embarrassment at having failed or been humiliated</div>				
+						  <div class="drop context-menu" id="choice3" alt="choice3" onclick="pic_click(1)">dazed, weak, or unsteady, especially from illness, intoxication, or a blow</div>				
+						  <div class="drop context-menu" id="choice4" alt="choice4" onclick="pic_click(1)">characterized by or appealing to an abnormal and unhealthy interest</div>
+					</div>	
+					
+					<div class="column2">			
+						  <div class="drag cursor" id="choice1" alt="choice1" onclick="pic_click(1)">morbid</div>								
+						  <div class="drag cursor" id="choice2" alt="choice2" onclick="pic_click(1)">groggy</div>										
+						  <div class="drag cursor" id="choice3" alt="choice3" onclick="pic_click(1)">chagrin</div>						
+						  <div class="drag cursor" id="choice4" alt="choice4" onclick="pic_click(1)">steadfast</div>
+					</div>
+			</div>		
+		</div>
+		-->
+		
+		
+		
+		<div class="flex-card" id="card-container">  
+			<div class="main-window">
+				<div class="word-pic-container">
+					<h1 id="card-word">leeway</h1>
+					<p id="card-chara">-noun-</p>
+					<img id="card-img"src="../voc_data/leeway.png"  alt="pic">
+				</div>
+				<section class="wordInfo-container">
+					<img src="../voc_data/icons/def.png"  alt="def">
+					<h1 id="def">the amount of freedom to move or act that is available</h1>
+					<img src="../voc_data/icons/eg.png"  alt="eg">
+					<h1 id="eg">We don't have enough leeway to pass the safety.</h1>
+					<img src="../voc_data/icons/syn.png"  alt="syn">
+					<h1 id="syn">freedom, scope, latitude</h1>		
+				</section>
+			</div>
+			<div class="main-window">
+				<div class="card-button-container">
+					<a class="card-button" onclick="new_question_click()">continue</a>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>

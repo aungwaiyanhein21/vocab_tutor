@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--Arthur Li-->
+	<head>
+			<title>Visual Learning</title>
+			<link href="css/index_voctutot.css?v=12111111111114" rel="stylesheet" type="text/css"/>
+			<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+			<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+			<script src="js\data_process.js?v=1111111111112" type="text/javascript" charset="utf-8"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<meta charset="UTF-8">
+			<meta name = "AESO" content="AESO">
+	</head>
+		
+	<body>
+		<div id="dash" class="dash-container"> 
+			<div class="main-window">
+				<div class="home-box">
+					<i class="fa fa-home cursor" style="font-size:45px;float:left;" id="home" onclick="go_home()"></i>
+				</div>
+				<div id="welcome-info"></div>
+				<button class="reset-button" onclick="reset_progress()">Reset <i class='fas fa-undo-alt' style='color:red'></i></button>
+			</div>
+			
+			<div class="main-window">
+				<h3 id="rank-test">
+					<div style="float:left;">Rank</div> <div style="float:left; padding-left:50%;">Words tested</div>
+				</h3>
+				
+				<div id="rank-test-info">
+					<div id="rank" style="float:left"></div> <div id="words_tested" style="float:left; padding-left:67.8%;"></div>
+				</div>
+				
+				<a class="rank-button" href="ranking/ranking.html">See ranking</a>
+				
+				<!-- FOR UPLOADING WORDS -->
+				<br><br>
+				<a class="rank-button" href="upload/upload.html">Share your words</a>
+				
+				
+				<h3 id="word-info"></h3>
+				<hr>
+				<div class="words-left">
+					<div id="words-left"></div>
+					
+					<div id="words-total"></div> 
+						<span>Word lists:
+							<i id="word_list" class='far fa-list-alt cursor' onclick="show_table('learned')"></i>
+						</span>
+				</div>
+				
+				
+				<div class="w3-light-grey w3-round-xlarge" >
+					<div id="progress" class="w3-container w3-blue w3-round-xlarge" style="width:25%"></div>
+				</div>
+				
+			</div>
+			
+			<div class="main-window">
+				<div class="container">
+				  <div class="row">
+					<div style="width:100000%;">
+						<div class="box_column">
+						  <a href="learning_mode/learning.html" style="width:100%" class="demo button_main">Learning Mode</a>
+						  <a class="down"><div class="down_background" onclick="currentSlide(1)">&#9207</div></a>
+						</div>
+						<div class="box_column">
+						  <a href="test_mode/test.html" style="width:100%" class="demo button_main">&nbsp &#8201 Test Mode</a>
+						  <a class="down"><div class="down_background" onclick="currentSlide(2)">&#9207</div></a>
+						</div>
+					</div> 
+				  </div>
+				  <div class="slide_container">
+						<div class="mySlides">
+							<div class="instruction">Start learning new English vocabularies recursively. Move your eyes to control the cursor. Right-winks for right-clicks while left-wink for left clicks
+								<form action="learning_mode/learning.html">
+									<div class="select">
+										<select id="unit_learn">
+											<option>--Select--</option>
+											<option>Unit 1</option>
+										</select>
+										<input type="submit" class="button2" onclick="get_unit_learning()">
+										<div class="select_arrow">
+										</div>							
+									</div>
+								</form>
+							</div>
+							<a class="exit_slide" onclick="exit_slide(1)">×</a>
+						</div>
+
+						<div class="mySlides">
+						  <div class="instruction">Start testing vocabularies you have learned. Set the unit you want to be tested below.
+							<br>
+							<form action="test_mode/test.html">
+									<div class="select">
+										<select id="unit_test">
+											<option>--Select--</option>
+											<option>Unit 1</option>
+										</select>
+										<input type="submit" class="button2" onclick="get_unit_test()">
+										<div class="select_arrow">
+										</div>							
+									</div>
+							</form>
+						  </div>
+						  <a class="exit_slide" onclick="exit_slide(2)">×</a>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		
+		<div id="table" class="list-container">
+			<div class="main-window">
+				<div class="home-box">
+					<i class="fa fa-home cursor" style="font-size:45px;float:left" onclick="go_back()"></i>
+				</div>
+				<div id="list-welcome-info">Welcome Arthur! click "Learned Words" to review the words you learned or "Dont-show Words" to view words skiped. </div>
+			</div>
+			
+			<div class="main-window">
+				<hr style="width:100%;margin:0 auto;">
+				<div id="words_learned" class="word-button-container cursor" onclick="show_table('learned')">
+					<div class="word-button" >Learned Words</div>
+				</div>
+				
+				<div id="words_dontshow" class="word-button-container cursor" onclick="show_table('dontshow')">
+					<div class="word-button">Don't-show Words</div>
+				</div>
+			</div>
+			
+			<div class="main-window">
+				<table id="word_table" class="wordtable">
+					<thead>
+						<tr>
+							<th>Words</th>
+							<th>Definitions</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr>
+							<td>morbid</td>
+							<td>characterized by or appealing to an abnormal and unhealthy interest</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+		
+		<div class="flex-card" id="card-container">		
+			<div class="main-window">
+				<div class="word-pic-container">
+					<h1 id="card-word">leeway</h1>
+					<p id="card-chara">-noun-</p>
+					<img id="card-img" src="voc_data/leeway.png"  alt="pic">
+				</div>
+				<section class="wordInfo-container">
+					<img src="voc_data/icons/def.png"  alt="def">
+					<h1 id="def">the amount of freedom to move or act that is available</h1>
+					<img src="voc_data/icons/eg.png"  alt="eg">
+					<h1 id="eg">We don't have enough leeway to pass the safety.</h1>
+					<img src="voc_data/icons/syn.png"  alt="syn">
+					<h1 id="syn">freedom, scope, latitude</h1>		
+				</section>
+			</div>
+		
+			<div class="main-window">
+				<div class="card-button-container">
+					<a class="card-button" onclick="back_to_table()">Go Back</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js\voc_slide.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js\start_mode.js" type="text/javascript" charset="utf-8"></script>
+</html>

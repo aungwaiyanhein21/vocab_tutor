@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--Arthur Li-->
+	<head>
+			<title>Learning Mode</title>
+			<link href="css/learning.css?v=31111111146" rel="stylesheet" type="text/css"/>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+			<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+			<meta charset="UTF-8"> 
+			<meta name = "Learning Mode" content="AESO">
+			<script src="js\learning.js?v=11121111111111145" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body onbeforeunload="save_progress()">
+		<div class="flex-question" id="question-container"> 
+		
+			<div class="main-window">
+				<div class="home-box">
+					<i class="fa fa-home cursor" style="font-size:48px;float:left" id="home" onclick="go_home()"></i>
+					<div style="font-size:25px;float:left" id="words-remained"></div>
+				</div>
+			</div>
+			
+			<div class="main-window">
+				<h1 id="question"><h1>
+			</div>
+			
+			<div class="main-window">
+				<div class="container">
+				  <div class="row">
+					<div>
+						<button class="box_column" >
+						  <img class="demo cursor" id="pic1" style="width:100%"  alt="pic1" onclick="pic_click(1)">
+						  <i class='fas fa-times' id="cross1"></i>
+						  <i class='fas fa-check' id="check1"></i>
+						</button>
+						<button class="box_column">
+						  <img class="demo cursor" id="pic2" style="width:100%"  alt="pic2" onclick="pic_click(2)">
+						  <i class='fas fa-times' id="cross2"></i>
+						  <i class='fas fa-check' id="check2"></i>
+						</button>
+						<button class="box_column">
+						  <img class="demo cursor" id="pic3" style="width:100%"  alt="pic3" onclick="pic_click(3)">
+						  <i class='fas fa-times' id="cross3"></i>
+						  <i class='fas fa-check' id="check3"></i>
+						</button>
+						<button class="box_column">
+						  <img class="demo cursor" id="pic4" style="width:100%"  alt="pic4" onclick="pic_click(4)">
+						  <i class='fas fa-times' id="cross4"></i>
+						  <i class='fas fa-check' id="check4"></i>
+						</button>
+					</div> 
+				  </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex-card" id="card-container">		
+			<div class="main-window">
+				<div class="word-pic-container">
+					<h1 id="card-word">leeway</h1>
+					<p id="card-chara">-noun-</p>
+					<img id="card-img" src="../voc_data/leeway.png"  alt="pic">
+				</div>
+				<section class="wordInfo-container">
+					<img src="../voc_data/icons/def.png"  alt="def">
+					<h1 id="def">the amount of freedom to move or act that is available</h1>
+					<img src="../voc_data/icons/eg.png"  alt="eg">
+					<h1 id="eg">We don't have enough leeway to pass the safety.</h1>
+					<img src="../voc_data/icons/syn.png"  alt="syn">
+					<h1 id="syn">freedom, scope, latitude</h1>		
+				</section>
+			</div>
+		
+			<div class="main-window">
+				<div class="card-button-container">
+					<a class="card-button" onclick="new_question_click()">continue</a>
+					<a class="card-button del-icon" onclick="dont_show()">don't show again</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
