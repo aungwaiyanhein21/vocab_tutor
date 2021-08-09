@@ -8,12 +8,13 @@
 
 <h2>Learn Mode</h2>
 <img src="images/words_study.gif" width=100% />
-<p>Users can click on image that corresponds to the sentence so t</p>
+<p>Users can click on image that corresponds to the sentence.</p>
 
 <hr>
 
 <h2>Test Mode</h2>
 <img src="images/words_test.gif" width=100% />
+<p>Users can test themselves by choosing the definition of the words that they have learned through images.</p>
 
 <hr>
 
